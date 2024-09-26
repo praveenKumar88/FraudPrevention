@@ -22,7 +22,7 @@ public class TransactionService {
         Stripe.apiKey = apiKey;
 
         Map<String, Object> params = new HashMap<>();
-        params.put("limit", 100);  // Example to fetch 100 transactions
+        params.put("limit", 100);
 
         ChargeCollection charges = Charge.list(params);
         return charges.getData();

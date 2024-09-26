@@ -25,10 +25,12 @@ public class FraudController {
     @GetMapping("/check")
     public List<String> checkFraudulentTransactions() throws StripeException {
         List<Charge> charges = transactionService.getAllCharges();
+        System.out.println(charges);
         List<String> fraudulentTransactions = new ArrayList<>();
 
         for (Charge charge : charges) {
             if (fraudDetectionService.isFraudulent(charge)) {
+                System.out.println(charge);
                 fraudulentTransactions.add(charge.getId());
 //                fraudDetectionService.sendFraudAlert(charge.getId());
             }
