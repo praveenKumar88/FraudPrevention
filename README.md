@@ -1,4 +1,1 @@
-Fraud Detection, monitoring and alerting service for Stripe that augments Stripe Radar
-
-//todo
-Specific use cases
+Core service layer for fraud detection system, exposing RESTful APIs that allow external systems (or Test mock data generator) to send transactions and receive fraud risk scores. Includes developer documentation via Swagger. 
